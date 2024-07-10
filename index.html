@@ -10,92 +10,109 @@
 
 <body>
   <header>
-    <section>
+    <section id="flexit">
+      <div id="logopic">
       <figure>
-        <a href="index.html"><img src="./images/logo.png" , alt="phone book" , title="phone book"></a>
+        <a href="index.html"><img src="./images/logo2.png" alt="phone book"  title="phone book"></a>
       </figure>
+      </div>
+      <div id="headline">
       <h1>PhoneBook</h1>
+      </div>
+      <div id="serching"> 
+        <input type="text" id="serchIn"  placeholder="Enter your serch" maxlength="30">
+        <button id="searchBtn"><img id="searchPic" onclick="serchSome" src="images/search2.png" alt="serch"></button>
+       
+        
+      </div>
     </section>
   </header>
   <main>
     <ul>
       <li id="categories">
-        <span></span>
-        <span>First name</span>
-        <span>Last name</span>
+        <span class="pic"></span>
+        <span class="fname">First name</span>
+        <span class="lname">Last name</span>
         <span class="mail">Email address</span>
         <span class="home">Home address</span>
-        <span>Phone number</span>
-        <th></th>
+        <span class="phonenum">Phone number</span>
+        <span class="btnDelet"><button class="btnD" type="button" onclick="deleteAll()">Delete All</button></span>
+        <span class="btnEdit"></span>
       </li>
-      <li>
-        <span><img src="./images/user.png" alt="user" title="user"></span>
-        <span>Adiel</span>
-        <span>Mendelson</span>
-        <span class="mail">adiel13150@gmail.com</span>
-        <span class="home"> hadekel 32</span>
-        <span>054-4777627</span>
-        <span><input type="reset" class="end"></span>
-      </li>
-      <li>
-        <span><img src="./images/user.png" alt="user" title="user"></span>
-        <span>Shahaf</span>
-        <span>David</span>
-        <span class="mail">shahaf123@gmail.com</span>
-        <span  class="home">tirat carmel 32</span>
-        <span>054-12345678</span>
-        <span><input type="reset" class="end"></span>
-      </li>
-      <li>
-        <span><img src="./images/user.png" alt="user" title="user"></span>
-        <span>Orly</span>
-        <span>Walella</span>
-        <span class="mail">orly12345@gmail.com</span>
-        <span class="home">kiryat motzkin 32</span>
-        <span>050-5647725</span>
-        <span><input type="reset" class="end"></span>
-      </li>
-      <li>
-        <span><img src="./images/user.png" alt="user" title="user"></span>
-        <span>Toni</span>
-        <span>Stark</span>
-        <span class="mail">ironman@gmail.com</span>
-        <span class="home">marvel univers</span>
-        <span>050-123567</span>
-        <span><input type="reset" class="end"></span>
-      </tlir>
-
+      <div id="contacts">
+        <li>
+          <span class="pic"><img src="images/user.png" alt="user" title="user"></span>
+          <span class="fname">Adiel</span>
+          <span class="lname">Mendelson</span>
+          <span class="mail">adiel13150@gmail.com</span>
+          <span class="home"> hadekel 32</span>
+          <span class="phonenum">054-4777627</span>
+          <span class="btnDelet"><button class="btnD" type="button" onclick="deleteMe()">Delete</button></span>
+          <span class="btnEdit"><button class="btnE" type="button" >edit</button></span>
+        </li>
+        <li>
+          <span class="pic"><img src="images/user.png" alt="user" title="user"></span>
+          <span class="fname">Shahaf</span>
+          <span class="lname">David</span>
+          <span class="mail">shahaf123@gmail.com</span>
+          <span  class="home">tirat carmel 32</span>
+          <span class="phonenum">054-12345678</span>
+          <span class="btnDelet"><button class="btnD" type="button" onclick="deleteMe()">Delete</button></span>
+          <span class="btnEdit"><button class="btnE" type="button" >edit</button></span>
+        </li>
+        <li>
+          <span class="pic"><img src="images/user.png" alt="user" title="user"></span>
+          <span class="fname">Orly</span>
+          <span class="lname">Walella</span>
+          <span class="mail">orly12345@gmail.com</span>
+          <span class="home">kiryat motzkin 32</span>
+          <span class="phonenum">050-5647725</span>
+          <span class="btnDelet"><button class="btnD" type="button" onclick="deleteMe()">Delete</button></span>
+          <span class="btnEdit"><button class="btnE" type="button" >edit</button></span>
+        </li>
+      
+      
+      
+      </div>
     </ul>
   
-    <!--<figure>
-      <img src="./images/plus.png" title="add", alt="add">
-    </figure>-->
-    <button class="open-button" onclick="openForm()"><img src="./images/plus2.png" title="add", alt="add"></button>
-
-    <div class="form-popup" id="myForm">
-      <h1>Login</h1>
-      <form action="/action_page.php" class="form-container">
-        
-        <label for="name">First Name:</label>
-        <input type="text" id="firsName" name="firsName" placeholder="Enter your first name" maxlength="30">
-
-        <label for="name">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" maxlength="30">
-
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
     
-        <label for="name">Home address:</label>
-        <input type="text" id="homeAddress" name="homeAddress" placeholder="Enter your home address" maxlength="80">
+    <button class="open-button" onclick="openForm()"><img src="images/plus2.png" title="add" alt="add"></button>
+    <div id="wrapper" onClick="closeModal(event)">
+      
+      <div class="form-popup" id="myForm">
         
-        <label for="phone">Enter your phone number:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-
-        <button type="submit" class="btn">Add</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-      </form>
+        <h1></h1>
+        <button ><img src="images/closeBtn.png" alt="close" id="closeBtn"></button>
+        <form  class="form-container">
+          <div class="item">
+            <label >First Name:</label>
+           <input type="text" id="firsName" name="firsName" placeholder="Enter your first name" maxlength="30">
+          </div>
+          
+          <div class="item">
+            <label>Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" maxlength="30">
+          </div>
+          <div class="item">
+            <label ><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" id="Email" required>
+          </div>
+          <div class="item">
+            <label >Home address:</label>
+            <input type="text" id="homeAddress" name="homeAddress" placeholder="Enter your home address" maxlength="80">
+          </div>
+          <div class="item">
+            <label >Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" >
+          </div>
+          <div id="popUpBtn">
+          <button class="btn" onclick="add()">save</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </div>
+        </form>
+      </div>
     </div>
-    
   </main>
   <footer>
     <p> &copy; Shahaf David and Adiel Sofia Mendelson</p>
