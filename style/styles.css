@@ -8,6 +8,7 @@ General
   margin: 0;
   padding: 0;
 }
+
 body {
   /*background: url('../images/background1.PNG') top left no-repeat;*/
   background-color: #153448;
@@ -25,6 +26,7 @@ body {
 html{
   background-color: #153448;
 }
+
 
 body {
   display: flex;
@@ -113,9 +115,7 @@ li{
   font-weight: 500;
   
 }
-li:hover{
-  background-color:rgba(60, 91, 111,0.8);
-}
+
 #categories {
   
   font-size: 1.6em;
@@ -215,7 +215,7 @@ width:80px;
 .open-button {
   background-color:#153448;
   border: none;
-  position: fixed;
+  position: absolute;
   right: 30px;
   margin-top: 2%;
 }
@@ -263,6 +263,7 @@ footer p {
 }
 
 
+
 /* #endregion */
 
 /* #region media */
@@ -271,15 +272,26 @@ media
 ***************************************/
 @media only screen and (max-width: 430px) {
   body{
-    width: 50%;
+    width: 97%;
     font-size: 0.05em;
   }
-  ul li span img{
-    width: 5px;
-    height: 5px;
-   
-  }
   
+ 
+  header img {
+    width: 50px;
+    margin-left:10px ;
+    margin-top: 15px;
+  }
+  header{
+  margin-left: 20px;
+}
+header h1{
+  font-size: 60em;
+}
+#serchIn{
+  width: 80px;
+  height: 20px;
+}
 }
 
 /* #endregion */

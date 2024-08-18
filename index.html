@@ -12,24 +12,21 @@
   <header>
     <section id="flexit">
       <div id="logopic">
-      <figure>
-        <a href="index.html"><img src="./images/logo2.png" alt="phone book"  title="phone book"></a>
-      </figure>
+        <figure>
+          <a href="index.html"><img src="./images/logo2.png" alt="phone book"  title="phone book"></a>
+        </figure>
       </div>
       <div id="headline">
-      <h1>PhoneBook</h1>
+        <h1>PhoneBook</h1>
       </div>
       <div id="serching"> 
         <input type="text" id="serchIn"  placeholder="Enter your serch" maxlength="30">
-        <button id="searchBtn"><img id="searchPic" onclick="serchSome" src="images/search2.png" alt="serch"></button>
-       
-        
       </div>
     </section>
   </header>
   <main>
     <ul>
-      <li id="categories">
+        <li id="categories">
         <span class="pic"></span>
         <span class="fname">First name</span>
         <span class="lname">Last name</span>
@@ -39,41 +36,7 @@
         <span class="btnDelet"><button class="btnD" type="button" onclick="deleteAll()">Delete All</button></span>
         <span class="btnEdit"></span>
       </li>
-      <div id="contacts">
-        <li>
-          <span class="pic"><img src="images/user.png" alt="user" title="user"></span>
-          <span class="fname">Adiel</span>
-          <span class="lname">Mendelson</span>
-          <span class="mail">adiel13150@gmail.com</span>
-          <span class="home"> hadekel 32</span>
-          <span class="phonenum">054-4777627</span>
-          <span class="btnDelet"><button class="btnD" type="button" onclick="deleteMe()">Delete</button></span>
-          <span class="btnEdit"><button class="btnE" type="button" >edit</button></span>
-        </li>
-        <li>
-          <span class="pic"><img src="images/user.png" alt="user" title="user"></span>
-          <span class="fname">Shahaf</span>
-          <span class="lname">David</span>
-          <span class="mail">shahaf123@gmail.com</span>
-          <span  class="home">tirat carmel 32</span>
-          <span class="phonenum">054-12345678</span>
-          <span class="btnDelet"><button class="btnD" type="button" onclick="deleteMe()">Delete</button></span>
-          <span class="btnEdit"><button class="btnE" type="button" >edit</button></span>
-        </li>
-        <li>
-          <span class="pic"><img src="images/user.png" alt="user" title="user"></span>
-          <span class="fname">Orly</span>
-          <span class="lname">Walella</span>
-          <span class="mail">orly12345@gmail.com</span>
-          <span class="home">kiryat motzkin 32</span>
-          <span class="phonenum">050-5647725</span>
-          <span class="btnDelet"><button class="btnD" type="button" onclick="deleteMe()">Delete</button></span>
-          <span class="btnEdit"><button class="btnE" type="button" >edit</button></span>
-        </li>
       
-      
-      
-      </div>
     </ul>
   
     
@@ -92,11 +55,11 @@
           
           <div class="item">
             <label>Last Name:</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" maxlength="30">
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" maxlength="30" required>
           </div>
           <div class="item">
             <label ><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" id="Email" required>
+            <input type="text" placeholder="Enter Email" id="Email"  required>
           </div>
           <div class="item">
             <label >Home address:</label>
@@ -107,8 +70,8 @@
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" >
           </div>
           <div id="popUpBtn">
-          <button class="btn" onclick="add()">save</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          <button type="button" id="change" class="btn" onclick="add()">save</button>
+          <button type="button" class="btn" onclick="closeForm()">Close</button>
         </div>
         </form>
       </div>
@@ -120,7 +83,9 @@
     
   </footer>
   <script src="js.js"></script>
+  
 
 </body>
 
 </html>
+
